@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Only Sweet Messages</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        overflow: hidden;
+        position: relative;
+        font-family: Cambria, Georgia, serif;
+    }
+
+    #trigger {
+        display: none;
+    }
+
+
+    .star {
+        position: absolute;
+        bottom: -20px;
+        width: 14px;
+        height: 14px;
+        background: #ff9ad5;
+        transform: rotate(-45deg);
+        opacity: 0;
+        animation: floatUp linear infinite;
+        filter: drop-shadow(0 0 6px rgba(255, 160, 220, 0.8));
+    }
+
+    .star::before,
+    .star::after {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background: #ff9ad5;
+        border-radius: 50%;
+    }
+
+    .star::before {
+        top: -7px;
+        left: 0;
+    }
+
+    .star::after {
+        left: 7px;
+        top: 0;
+    }
+
+    .star1 {
+        left: 6%;
+        animation-duration: 6s;
+    }
+
+    .star2 {
+        left: 16%;
+        animation-duration: 5s;
+    }
+
+    .star3 {
+        left: 28%;
+        animation-duration: 7s;
+    }
+
+    .star4 {
+        left: 42%;
+        animation-duration: 6.5s;
+    }
+
+    .star5 {
+        left: 56%;
+        animation-duration: 5.5s;
+    }
+
+    .star6 {
+        left: 70%;
+        animation-duration: 7.5s;
+    }
+
+    .star7 {
+        left: 84%;
+        animation-duration: 6.2s;
+    }
+
+    @keyframes floatUp {
+        0% {
+            transform: translateY(0) rotate(-45deg);
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(-120vh) rotate(-45deg);
+            opacity: 1;
+        }
+    }
+
+
+    label.btn {
+        margin-bottom: 30px;
+        padding: 18px 28px;
+        background: white;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 16px;
+        cursor: pointer;
+        box-shadow: 0 0 12px #b4e6ff, 0 0 22px #ffb3ec;
+        animation: glow 2s infinite alternate;
+        z-index: 10;
+    }
+
+    @keyframes glow {
+        from {
+            box-shadow: 0 0 18px #b4e6ff;
+        }
+
+        to {
+            box-shadow: 0 0 22px #ffb3ec;
+        }
+    }
+
+    .card {
+        position: fixed;
+        width: 260px;
+        height: 140px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 12px;
+        font-size: 17px;
+        color: white;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 6;
+    }
+
+
+    .c1 {
+        top: 12%;
+        left: 6%;
+    }
+
+    .c2 {
+        top: 18%;
+        right: 8%;
+    }
+
+    .c3 {
+        top: 38%;
+        left: 10%;
+    }
+
+    .c4 {
+        top: 48%;
+        right: 12%;
+    }
+
+    .c5 {
+        bottom: 30%;
+        left: 25%;
+    }
+
+    .c6 {
+        bottom: 25%;
+        right: 25%;
+    }
+
+    .c7 {
+        top: 65%;
+        left: 8%;
+    }
+
+    .c8 {
+        top: 70%;
+        right: 10%;
+    }
+
+    .c9 {
+        top: 30%;
+        left: 40%;
+    }
+
+    .c10 {
+        bottom: 15%;
+        left: 45%;
+    }
+
+    #trigger:checked~.c1 {
+        animation: popup 4s ease forwards;
+    }
+
+    #trigger:checked~.c2 {
+        animation: popup 4s ease forwards 0.4s;
+    }
+
+    #trigger:checked~.c3 {
+        animation: popup 4s ease forwards 0.8s;
+    }
+
+    #trigger:checked~.c4 {
+        animation: popup 4s ease forwards 1.2s;
+    }
+
+    #trigger:checked~.c5 {
+        animation: popup 4s ease forwards 1.6s;
+    }
+
+    #trigger:checked~.c6 {
+        animation: popup 4s ease forwards 2s;
+    }
+
+    #trigger:checked~.c7 {
+        animation: popup 4s ease forwards 2.4s;
+    }
+
+    #trigger:checked~.c8 {
+        animation: popup 4s ease forwards 2.8s;
+    }
+
+    #trigger:checked~.c9 {
+        animation: popup 4s ease forwards 3.2s;
+    }
+
+    #trigger:checked~.c10 {
+        animation: popup 4s ease forwards 3.6s;
+    }
+
+    @keyframes popup {
+        0% {
+            opacity: 0;
+            transform: scale(0.85);
+            filter: blur(4px);
+        }
+
+        15% {
+            opacity: 1;
+            transform: scale(1);
+            filter: blur(0);
+        }
+
+        80% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(0.95);
+            filter: blur(2px);
+        }
+    }
+</style>
+
+<body>
+
+    <input type="checkbox" id="trigger">
+
+
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+    <div class="star star5"></div>
+    <div class="star star6"></div>
+    <div class="star star7"></div>
+
+    <label for="trigger" class="btn">
+        Click to Get Sweet MSG 💖
+    </label>
+
+
+    <div class="card c1">You are deeply loved 💕</div>
+    <div class="card c2">You make the world softer 💖</div>
+    <div class="card c3">Your smile is magic ✨</div>
+    <div class="card c4">You are someone’s safe place 🤍</div>
+    <div class="card c5">Love looks good on you 🌸</div>
+    <div class="card c6">You deserve endless affection 💗</div>
+    <div class="card c7">You are pure warmth 💞</div>
+    <div class="card c8">Your heart is beautiful 💘</div>
+    <div class="card c9">You are cherished more than you know 🥰</div>
+    <div class="card c10">You are love itself ❤️</div>
+
+</body>
+
+</html>
